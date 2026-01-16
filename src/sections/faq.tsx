@@ -1,4 +1,4 @@
-import Accordion from "../components/accordion";
+import Accordion from "../components/accordion.tsx";
 
 const Faq = () => {
   return (
