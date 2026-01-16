@@ -1,23 +1,21 @@
-// import Hero from "../sections/hero";
-// import Location from "../sections/location";
-// import ConfirmAttendance from "../sections/confirm-attendance";
-// import Faq from "../sections/faq";
-// import Footer from "../sections/footer";
-// import ToGifts from "../components/to-gifts";
+import Header from "../sections/header";
+import Hero from "../sections/hero";
+import LocationDateData from "../sections/location-date-data";
+import ToGifts from "../sections/to-gifts";
+import ConfirmAttendance from "../sections/confirm-attendance";
+import Faq from "../sections/faq";
+import Footer from "../sections/footer";
 
 function Home() {
   return (
     <>
-      <p className="text-primary text-xl font-[monbaiti]">
-        “Así que ya no son dos, sino una sola carne. Por tanto, lo que Dios ha
-        unido, ningún hombre lo separe»”.
-      </p>
-      {/* <Hero />
+      <Header />
+      <Hero />
+      <LocationDateData />
       <ToGifts />
-      <Location />
       <ConfirmAttendance />
       <Faq />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
