@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import supabase from "../utils/supabase";
 import type { Gift } from "../types/gift";
-import GiftCard from "../components/gift-card.tsx";
-import GiftModal from "../components/gift-modal.tsx";
+import GiftCard from "../components/gift-card";
+import GiftModal from "../components/gift-modal";
 import { Link } from "react-router";
 import { toast, Toaster } from "sonner";
 
