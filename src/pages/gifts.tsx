@@ -15,7 +15,24 @@ const Gifts = () => {
     const fetchGifts = async () => {
       const { data, error } = await supabase.from("gifts").select("*");
       if (error) console.error("Error al cargar los regalos:", error.message);
-      else setGiftList(data);
+
+      const priorityOrder = [4, 20, 6, 12, 16, 17];
+
+      const orderedGifts =
+        data &&
+        [...data].sort((a, b) => {
+          const indexA = priorityOrder.indexOf(a.id);
+          const indexB = priorityOrder.indexOf(b.id);
+
+          // si no está en la lista, va al final
+          if (indexA === -1 && indexB === -1) return 0;
+          if (indexA === -1) return 1;
+          if (indexB === -1) return -1;
+
+          return indexA - indexB;
+        });
+
+      setGiftList(orderedGifts || []);
     };
 
     fetchGifts();
