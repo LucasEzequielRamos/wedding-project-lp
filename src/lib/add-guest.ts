@@ -5,7 +5,8 @@ function normalizeName(name: string) {
     .trim()
     .toLowerCase()
     .normalize('NFD') 
-    .replace(/[\u0300-\u036f]/g, '');
+    .replace(/([\u0300-\u036f])/g, '')
+    .replace(/ñ/g, 'ñ');
 }
 
 export async function addGuest(fullName: string, tel: string) {
