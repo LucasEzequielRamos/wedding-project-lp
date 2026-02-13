@@ -7,7 +7,7 @@ const LocationDateData = () => {
         </picture>
       </div>
       <div className="flex flex-col justify-center items-center py-10">
-        <h3 className="mb-14">HORARIO: 17:00hs</h3>
+        <h3 className="mb-14">HORARIO: 12:00hs</h3>
         <div className="flex flex-col items-center">
           <p className="mb-5">UBICACION</p>
           <picture>
